@@ -39,29 +39,32 @@ export default function Projects() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                                className="bg-white border border-gray-200 rounded-lg p-5 hover:border-blue-300 transition-colors"
                             >
-                                <div className="flex items-start justify-between mb-2">
-                                    <h3 className="text-lg font-semibold text-gray-900">{project.title}</h3>
-                                    <a
-                                        href={project.github}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-gray-400 hover:text-gray-700 transition-colors"
-                                    >
-                                        <Github size={18} />
-                                    </a>
-                                </div>
+                                <a
+                                    href={project.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block h-full bg-white border border-gray-200 rounded-lg p-5 hover:border-blue-300 hover:shadow-md transition-all group"
+                                >
+                                    <div className="flex items-start justify-between mb-2">
+                                        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                                            {project.title}
+                                        </h3>
+                                        <div className="text-gray-400 group-hover:text-blue-500 transition-colors">
+                                            <Github size={18} />
+                                        </div>
+                                    </div>
 
-                                <p className="text-gray-600 text-sm mb-3">{project.description}</p>
+                                    <p className="text-gray-600 text-sm mb-3">{project.description}</p>
 
-                                <div className="flex flex-wrap gap-2">
-                                    {project.tags.map(tag => (
-                                        <span key={tag} className="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded">
-                                            {tag}
-                                        </span>
-                                    ))}
-                                </div>
+                                    <div className="flex flex-wrap gap-2">
+                                        {project.tags.map(tag => (
+                                            <span key={tag} className="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </a>
                             </motion.div>
                         ))}
                     </div>
