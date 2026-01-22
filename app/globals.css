@@ -14,7 +14,8 @@
 
 :root {
   /* Clean Light Minimal Palette - Blue Accent */
-  --background: #ffffff;
+  --background: #f8fafc;
+  /* slate-50 (Off-white) */
   /* Pure White */
   --foreground: #1e293b;
   /* slate-800 - Dark Gray Text */

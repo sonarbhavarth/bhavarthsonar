@@ -23,7 +23,7 @@ const skillsData = [
 
 export default function Skills() {
     return (
-        <section id="skills" className="py-16 bg-white">
+        <section id="skills" className="py-16">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="max-w-3xl mx-auto">
                     <h2 className="text-2xl font-bold text-gray-900 mb-8">Technical Skills</h2>
