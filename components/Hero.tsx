@@ -17,12 +17,13 @@ export default function Hero() {
                         {/* Profile Photo */}
                         <div className="w-28 h-28 mx-auto mb-6 rounded-full border-4 border-white shadow-lg overflow-hidden">
                             <Image
-                                src="/68860231.png"
+                                src="/bhavarthsonar/68860231.png"
                                 alt="Bhavarth Sonar"
                                 width={112}
                                 height={112}
                                 className="w-full h-full object-cover"
                                 priority
+                                unoptimized // Force unoptimized to bypass any basePath issues with next/image
                             />
                         </div>
 
